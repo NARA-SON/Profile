@@ -1,0 +1,170 @@
+/* ----------common---------- */
+@font-face {
+    font-family: NexonGothic;
+    src: url("../font/NEXON\ Lv1\ Gothic\ OTF.otf");
+}
+
+/* @font-face {
+    font-family: TravelBallad;
+    src: url("../font/Travel\ Ballad.ttf");
+} */
+
+body,html{
+    font-family: NexonGothic;
+    font-size:20px;
+}
+
+p{
+    line-height:150%;
+}
+
+h1{
+    font-size: 10rem;
+    color: #cccccc;
+    font-weight: 900;
+    opacity: 0.1;
+}
+
+/* travel ballad cursive style */
+.tb{
+    border:1px solid red;
+    width:30%;
+}
+
+/* logo, top button size */
+.small{
+    width:5%;
+}
+
+/* ----------layout---------- */
+.logo{
+    position:fixed;
+    top:2%;
+    right:1%;
+}
+
+header{
+    width:100%;
+    height:100vh;
+}
+
+main>section{
+    width:100%;
+    height:100vh;
+    background:#232323;
+    color:#fff;
+}
+
+footer{
+    width:100%;
+    height:100vh;
+}
+
+/* ----------header---------- */
+.gnb{
+    color:#fff;
+    background:#71C15E;
+    border-radius: 30px;
+    width:30%;
+    display:flex;
+    text-align:center;
+    position:fixed;
+    top:4%;
+    right:7%;
+}
+
+.gnb>li{
+    background:#71C15E;
+    border-radius: 30px;
+    flex:1;
+    height:30px;
+    line-height:30px;
+    position:relative;
+}
+
+.gnb>li>ul{
+    background:#71C15E;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position:absolute;
+    top:30px;
+    left:0;
+    width:100%;
+    opacity:0;
+    transition:all 1s ease 0s;
+}
+
+.gnb>li:hover ul{
+    opacity:1;
+}
+
+.gnb>li>ul>li{
+    height:25px;
+    line-height:25px;
+}
+
+/* son nara */
+
+/* page2 */
+/* creative designer im ready */
+.iam{position:relative;
+background:#fff;
+color:#232323;}
+
+.iam>h1{
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.type{
+    color:#71C15E;
+    display:flex;
+    width:550px;
+    flex-wrap: wrap;
+    /* border:1px solid red; */
+}
+
+.type>li{
+    margin-right:20px;
+    margin-bottom:10px;
+    width:100px;
+}
+
+/* page3 - skill */
+.skill>h1{
+    
+}
+
+
+/* ----------footer---------- */
+footer{
+    /* display:flex; */
+}
+
+.insta{
+    border:1px solid red;
+}
+
+.txtFooter{
+    border:1px solid red;
+    /* width:100%; */
+}
+
+.txtFooter>dl{
+    border:1px solid red;
+    /* width:60%; */
+    display:flex;
+    flex-wrap: wrap;
+    line-height: 50px;
+}
+.txtFooter>dl>dt{
+    /* width:30%; */
+    height:50px;
+    color:#71C15E;
+    font-weight: bold;
+}
+
+.txtFooter>dl>dd{
+    /* width:60%; */
+}
