@@ -1,0 +1,57 @@
+%!Adobe-FontList 1.22
+%Locale:0x412
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:CID
+FontName:NEXONLv1GothicOTFRegular
+FamilyName:NEXON Lv1 Gothic OTF
+StyleName:Regular
+FullName:NEXON Lv1 Gothic OTF
+MenuName:넥슨Lv1고딕 OTF
+StyleBits:0
+FamilyNameNative:넥슨Lv1고딕 OTF
+StyleNameNative:Regular
+FullNameNative:넥슨Lv1고딕 OTF
+WritingScript:Korean
+OutlineFileName:E:\손나라\Redesign(Profile)\Font\NEXON Lv1 Gothic OTF.otf
+DataFormat:sfntData
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:877892
+FileModTime:1688350629
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,NEXON Lv1 Gothic OTF
+NameArray:3,Mac,4,넥슨Lv1고딕 OTF
+NameArray:0,Win,1,NEXON Lv1 Gothic OTF
+NameArray:0,Win,16,NEXON Lv1 Gothic OTF
+NameArray:3,Win,1,넥슨Lv1고딕 OTF
+NameArray:3,Win,16,넥슨Lv1고딕 OTF
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Travel-Ballad
+FamilyName:Travel Ballad
+StyleName:Regular
+FullName:Travel Ballad
+MenuName:Travel Ballad
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\손나라\Redesign(Profile)\Font\Travel Ballad.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:35240
+FileModTime:1688350629
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Travel Ballad
+NameArray:0,Win,1,Travel Ballad
+%EndFont
+
