@@ -1,20 +1,22 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
   let count = 0;
-
     // 팝업 슬라이드
   $(".btnPopup").click(function () { 
     count++;
     if (count > 7) { count = 0 }
     $(".popTrain").css("transform", "translateX(" + (count * -12.5) + "%)")
+    $(".pop_pagination>li").removeClass("on")
+    $(".pop_pagination>li").eq(count).addClass("on")
+
   })
 
-  // 배너 슬라이드
-  $(".btnBanner").click(function () { 
-    count++;
-    if (count > 3) { count = 0 }
-    $(".brTrain").css("transform", "translateX(" + (count * -25) + "%)")
-  })
+  // 번호를 누르면 해당 번호 기차로 이동할 것
+  // $(".pop_pagination>li").eq(count).click(function(){
+  //   $(".pop_pagination>li").removeClass("on")
+  //   $(this).eq(count).addClass("on")
+  //   $(".popTrain").css("transform", "translateX(" + (count * -12.5) + "%)")
+  // })
 
   // POPUP 이미지를 클릭하면 팝업창이 뜬다
   $(".popTrain>li").eq(0).click(function () { 
@@ -43,9 +45,10 @@ $(document).ready(function(){
   })
 
 
-    // POPUP 닫기버튼을 클릭하면 팝업창이 닫힌다.
-  $(".popExit").click(function () { 
+    // 닫기버튼을 클릭하면 팝업창이 닫힌다.
+  $(".Exit").click(function () { 
     $(".popWrap").removeClass("on")
+    $(".reWrap").removeClass("on")
   })
 
   // POPUP 마우스를 올리면 btnView 버튼이 뜬다.
@@ -58,8 +61,10 @@ $(document).ready(function(){
     $(".btnView").removeClass("on")
   })
   return false;
-  
 
-  
+
+
+
+
 
 })
