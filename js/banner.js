@@ -11,5 +11,15 @@ $(document).ready(function () {
 
   })
 
+  $(".banner_pagination>li").click(function () { 
+    // 0번째 리스트를 클릭하면 0번째 자리로 기차가 이동
+    // 1번째 리스트를 클릭하면 1번째 자리로 기차가 이동
+    let idxbr = $(this).index()
+    $(".banner_pagination>li").removeClass("on")
+    $(this).addClass("on")
+    i = idxbr
+    $(".brTrain").css("transform", "translateX(" + (idxbr * -25) + "%)")
+  })
+
 
 })

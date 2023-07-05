@@ -11,37 +11,23 @@ $(document).ready(function () {
 
   })
 
-  // 번호를 누르면 해당 번호 기차로 이동할 것
-  // $(".pop_pagination>li").eq(count).click(function(){
-  //   $(".pop_pagination>li").removeClass("on")
-  //   $(this).eq(count).addClass("on")
-  //   $(".popTrain").css("transform", "translateX(" + (count * -12.5) + "%)")
-  // })
-
   // POPUP 이미지를 클릭하면 팝업창이 뜬다
-  $(".popTrain>li").eq(0).click(function () { 
-    $(".popWrap").eq(0).addClass("on")
+  // 0번째 리스트를 클릭하면 0번째 팝업창이 열린다.
+  // 1번째 리스트를 클릭하면 1번째 팝업창이 열린다.
+  $(".popTrain>li").click(function () { 
+    let idx = $(this).index()
+    $(".popWrap").removeClass("on")
+    $(".popWrap").eq(idx).addClass("on")
   })
-  $(".popTrain>li").eq(1).click(function () { 
-    $(".popWrap").eq(1).addClass("on")
-  })
-  $(".popTrain>li").eq(2).click(function () { 
-    $(".popWrap").eq(2).addClass("on")
-  })
-  $(".popTrain>li").eq(3).click(function () { 
-    $(".popWrap").eq(3).addClass("on")
-  })
-    $(".popTrain>li").eq(4).click(function () { 
-    $(".popWrap").eq(4).addClass("on")
-  })
-    $(".popTrain>li").eq(5).click(function () { 
-    $(".popWrap").eq(5).addClass("on")
-    })
-  $(".popTrain>li").eq(6).click(function () { 
-    $(".popWrap").eq(6).addClass("on")
-    })
-  $(".popTrain>li").eq(7).click(function () { 
-    $(".popWrap").eq(7).addClass("on")
+
+  $(".pop_pagination>li").click(function () { 
+    // 0번째 리스트를 클릭하면 0번째 자리로 기차가 이동
+    // 1번째 리스트를 클릭하면 1번째 자리로 기차가 이동
+    let idx = $(this).index()
+    $(".pop_pagination>li").removeClass("on")
+    $(this).addClass("on")
+    count = idx
+    $(".popTrain").css("transform", "translateX(" + (idx * -12.5) + "%)")
   })
 
 

@@ -1,19 +1,28 @@
 /* ----------common---------- */
+/* 폰트등록 */
 @font-face {
   font-family: NexonGothic;
   src: url("../font/NEXON\ Lv1\ Gothic\ OTF.otf");
 }
 
+@font-face {
+  font-family: NexonGothic light;
+  src: url("../font/NEXON\ Lv1\ Gothic\ OTF\ Light.otf");
+}
+
+/* 전체 폰트사이즈와 폰트스타일 고정 */
 body,
 html {
-  font-family: NexonGothic;
+  font-family: NexonGothic light;
   font-size: 18px;
 }
 
+/* 전체 p태그 상하간격 넓힘 */
 p {
   line-height: 150%;
 }
 
+/* 화면 하단 큰글씨 */
 h1 {
   font-size: 10rem;
   color: #cccccc;
@@ -25,28 +34,50 @@ h1 {
   line-height: 70%;
 }
 
+/* COLOR-BOX */
 .colorsample {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
 
+/*애니메이션 등록*/
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-300%)
+  }
+
+  100% {
+    transform: translateX(0%)
+  }
+}
+
+@keyframes logoMove {
+  0% {
+    transform: translateY(30%)
+  }
+
+  50% {
+    transform: translateY(00%)
+  }
+
+  100% {
+    transform: translateY(30%)
+  }
+}
+
+.mbtt {
+  transform: translateY(100%);
+  opacity: 0.1;
+  transition: all 1s ease 0s;
+}
+
+.mbtt.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* ----------layout---------- */
-.logo {
-  position: fixed;
-  top: 2%;
-  right: 1%;
-  width: 100px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-header {
-  width: 100%;
-  height: 100vh;
-  border: 1px solid transparent;
-}
-
 main>section {
   width: 100%;
   height: 100vh;
@@ -60,10 +91,25 @@ footer {
 }
 
 /* ----------header---------- */
+/* logo */
+#logo {
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  width: 100px;
+  z-index: 2;
+  cursor: pointer;
+  animation: logoMove 5s linear 0s infinite;
+}
+
+#logo path {
+  fill: #71C15E;
+}
+
 /* menu */
 .gnb {
-  color: #fff;
-  background: #71C15E;
+  color: #71C15E;
+  border: 1px solid #71C15E;
   border-radius: 30px;
   width: 30%;
   display: flex;
@@ -72,15 +118,16 @@ footer {
   top: 4%;
   right: 7%;
   z-index: 1;
-  display: none;
+  transform: translateX(120%);
+  transition: all 1s ease 0s;
 }
 
 .gnb.on {
-  display: flex;
+  transform: translateX(0%);
 }
 
 .gnb>li {
-  background: #71C15E;
+  color: #71C15E;
   border-radius: 30px;
   flex: 1;
   height: 40px;
@@ -88,18 +135,35 @@ footer {
   position: relative;
 }
 
+.gnb>li:nth-of-type(1) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.gnb>li:nth-of-type(2),
+.gnb>li:nth-of-type(3) {
+  border-radius: 0;
+}
+
+.gnb>li:nth-of-type(4) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .gnb>li>a {
   display: block;
 }
 
-.gnb>li>a:hover {
-  text-decoration: underline;
+.gnb>li:hover {
+  background: #71C15E;
+  color: #fff;
 }
 
 .gnb>li>ul {
   background: #71C15E;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: absolute;
   top: 40px;
   left: 0;
@@ -117,7 +181,11 @@ footer {
   line-height: 25px;
   padding: 5px 0;
   border: 1px solid #71C15E;
-  border-radius: 10px;
+  border-radius: 30px;
+}
+
+.gnb>li>ul>li>a {
+  display: block;
 }
 
 .gnb>li>ul>li:hover {
@@ -125,23 +193,36 @@ footer {
   color: #71C15E;
 }
 
-/* son nara */
-#son {
-  position: absolute;
-  top: 210px;
-  left: 400px;
-  width: 30%;
+/* INTRO */
+#intro {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#son path {
-  fill: transparent;
-  stroke: #71C15E;
-  /* transition:width 1s ease 0s,height 1s ease 1s; */
+#intro>figure {
+  width: 60%;
 }
 
-#son.on path {
-  stroke-dashoffset: 0 !important;
-  fill: #71C15E;
+.introSVG .cls-1 {
+  fill: #232323;
+}
+
+.introSVG .cls-deco {
+  fill: #232323;
+  transition: all 1s ease 0s;
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+#intro.on .introSVG .cls-deco {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.introSVG .cls-2 {
+  fill: #71c15e;
 }
 
 #nara {
@@ -154,7 +235,6 @@ footer {
 #nara path {
   fill: transparent;
   stroke: #71C15E;
-  /* transition:width 1s ease 0s,height 1s ease 1s; */
 }
 
 #nara.on path {
@@ -162,46 +242,19 @@ footer {
   fill: #71C15E;
 }
 
-header>h2 {
-  position: absolute;
-  top: 500px;
-  left: 1000px;
-  font-size: 1.2rem;
-}
-
-header>.bar1 {
-  position: absolute;
-  top: 440px;
-  left: 290px;
-}
-
 /* page2 */
-/* creative designer im ready */
+/* creative designer i'm ready */
 #iam {
-  border: 1px solid transparent;
   position: relative;
   background: #fff;
   color: #232323;
-}
-
-.cd {
-  position: absolute;
-  top: 150px;
-  left: 270px;
-  width: 60%;
-}
-
-.ready {
-  position: absolute;
-  top: 320px;
-  right: 390px;
-  width: 30%;
 }
 
 .iamTxt {
   position: absolute;
   bottom: 200px;
   left: 270px;
+  font-family: NexonGothic;
 }
 
 #iam>h1 {
@@ -231,7 +284,6 @@ header>.bar1 {
 
 /* page3 - skill */
 #skill {
-  border: 1px solid transparent;
   position: relative;
 }
 
@@ -242,7 +294,7 @@ header>.bar1 {
 .skill {
   width: 1000px;
   margin: 0 auto;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .skill>li {
@@ -297,7 +349,6 @@ header>.bar1 {
 
 /* page4 - pop-up */
 #popup {
-  border: 1px solid transparent;
   position: relative;
 }
 
@@ -319,7 +370,7 @@ header>.bar1 {
   height: 700px;
   margin: 0 auto;
   overflow: hidden;
-  margin-top: 150px;
+  padding-top: 150px;
   position: relative;
 }
 
@@ -354,7 +405,7 @@ header>.bar1 {
   width: 300px;
   height: 57px;
   color: #fff;
-  font-size: 2rem;
+  font-weight: 900;
   background: #000;
   border: 1px solid #71C15E;
   border-radius: 50px;
@@ -755,13 +806,12 @@ header>.bar1 {
 
 /* page6 - redesign */
 #redesign {
-  border: 1px solid transparent;
   position: relative;
 }
 
 .reImg {
   width: 1000px;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-left: 50px;
 }
 
@@ -833,7 +883,8 @@ header>.bar1 {
   margin: 20px 0 0 40px;
   width: 1217px;
   height: 700px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .plan {
@@ -879,8 +930,8 @@ h6 {
 
 /* ----------footer---------- */
 footer {
-  border: 1px solid transparent;
   position: relative;
+  font-family: NexonGothic;
 }
 
 footer>h1 {
@@ -890,13 +941,15 @@ footer>h1 {
 
 .insta {
   position: absolute;
-  bottom: 15%;
+  bottom: 22%;
   left: 20%;
   z-index: 1;
 }
 
 .txtFooter {
-  margin: 226px 0 0 730px;
+  position: absolute;
+  top: 19%;
+  left: 39%;
 }
 
 .txtFooter p {
@@ -921,21 +974,60 @@ footer>h1 {
   width: 300px;
 }
 
-.thank {
-  width: 40%;
+#thank {
+  width: 80%;
 }
 
-.you {
-  width: 21%;
-  margin-left: 24%;
+#thank path {
+  fill: transparent;
+  stroke: #71C15E;
+  /* transition:width 1s ease 0s,height 1s ease 1s; */
+}
+
+#thank.on path {
+  stroke-dashoffset: 0 !important;
+  fill: #71C15E;
+}
+
+#you {
+  width: 48%;
+  margin-left: 47%;
   transform: translateY(-26%);
 }
 
+#you path {
+  fill: transparent;
+  stroke: #71C15E;
+}
+
+#you.on path {
+  stroke-dashoffset: 0 !important;
+  fill: #71C15E;
+}
+
 .top {
-  width: 5%;
+  width: 3%;
   position: absolute;
-  bottom: 20px;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  animation: logoMove 5s linear 0s infinite;
+}
+
+/* scrollbar design */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #71C15E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
