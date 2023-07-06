@@ -32,6 +32,8 @@ h1 {
   bottom: 0;
   left: 0;
   line-height: 70%;
+  width: 100%;
+  text-align: end;
 }
 
 /* COLOR-BOX */
@@ -95,7 +97,7 @@ footer {
 #logo {
   position: fixed;
   top: 2%;
-  right: 1%;
+  right: 2%;
   width: 100px;
   z-index: 2;
   cursor: pointer;
@@ -205,41 +207,41 @@ footer {
   width: 60%;
 }
 
+/* web pulisher & web designer */
 .introSVG .cls-1 {
+  fill: transparent;
+  stroke: #232323;
+}
+
+.introSVG.on .cls-1 {
   fill: #232323;
+  stroke-dashoffset: 0 !important;
 }
 
-.introSVG .cls-deco {
-  fill: #232323;
-  transition: all 1s ease 0s;
-  opacity: 0;
-  transform: translateX(60px);
-}
-
-#intro.on .introSVG .cls-deco {
-  opacity: 1;
-  transform: translateX(0px);
-}
-
+/* Son Nara */
 .introSVG .cls-2 {
-  fill: #71c15e;
-}
-
-#nara {
-  position: absolute;
-  top: 490px;
-  left: 610px;
-  width: 30%;
-}
-
-#nara path {
   fill: transparent;
   stroke: #71C15E;
 }
 
-#nara.on path {
-  stroke-dashoffset: 0 !important;
+.introSVG.on .cls-2 {
   fill: #71C15E;
+  stroke-dashoffset: 0 !important;
+}
+
+/* intro left bar */
+.introSVG .cls-deco {
+  fill: transparent;
+  transition: all 1s ease 0s;
+  opacity: 0.5;
+  transform: translateX(60px);
+}
+
+.introSVG.on .cls-deco {
+  fill: #232323;
+  opacity: 1;
+  transform: translateX(0px);
+  stroke-dashoffset: 0 !important;
 }
 
 /* page2 */
@@ -258,8 +260,12 @@ footer {
 }
 
 #iam>h1 {
-  font-size: 24rem;
-  color: #999999;
+  color: #232323;
+}
+
+#iam>figure {
+  width: 80%;
+  padding: 10% 0 0 10%;
 }
 
 .type {
@@ -280,6 +286,28 @@ footer {
   position: absolute;
   bottom: 200px;
   left: 210px;
+}
+
+/* creative designer */
+.cd .cls-1 {
+  fill: transparent;
+  stroke: #232323;
+}
+
+.cd.on .cls-1 {
+  fill: #232323;
+  stroke-dashoffset: 0 !important;
+}
+
+/* im ready */
+.cd .cls-2 {
+  fill: transparent;
+  stroke: #71C15E;
+}
+
+.cd.on .cls-2 {
+  fill: #71C15E;
+  stroke-dashoffset: 0 !important;
 }
 
 /* page3 - skill */
@@ -376,17 +404,21 @@ footer {
 
 .popTrain {
   width: 800%;
+  height: 100%;
   display: flex;
   transition: all 1s ease 0s;
+  overflow: hidden;
 }
 
 .popTrain>li {
   width: calc(100%/8);
+  height: 100%;
   background: transparent;
 }
 
 .popTrain>li>img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
   transform: scale(1);
@@ -879,7 +911,6 @@ footer {
 }
 
 .rePopImg {
-  box-sizing: border-box;
   margin: 20px 0 0 40px;
   width: 1217px;
   height: 700px;
@@ -936,7 +967,6 @@ footer {
 
 footer>h1 {
   color: #232323;
-  font-size: 18rem;
 }
 
 .insta {
@@ -974,33 +1004,16 @@ footer>h1 {
   width: 300px;
 }
 
-#thank {
+.thank {
   width: 80%;
 }
 
-#thank path {
-  fill: transparent;
-  stroke: #71C15E;
-  /* transition:width 1s ease 0s,height 1s ease 1s; */
-}
-
-#thank.on path {
-  stroke-dashoffset: 0 !important;
-  fill: #71C15E;
-}
-
-#you {
-  width: 48%;
-  margin-left: 47%;
-  transform: translateY(-26%);
-}
-
-#you path {
+.thank path {
   fill: transparent;
   stroke: #71C15E;
 }
 
-#you.on path {
+.thank.on path {
   stroke-dashoffset: 0 !important;
   fill: #71C15E;
 }

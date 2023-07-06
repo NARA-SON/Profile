@@ -4,6 +4,37 @@
 %BeginFont
 Handler:DirectoryHandler
 FontType:CID
+FontName:NEXONLv1GothicOTFLight
+FamilyName:NEXON Lv1 Gothic OTF
+StyleName:Light
+FullName:NEXON Lv1 Gothic OTF Light
+MenuName:넥슨Lv1고딕 OTF Light
+StyleBits:0
+FamilyNameNative:넥슨Lv1고딕 OTF
+StyleNameNative:Light
+FullNameNative:넥슨Lv1고딕 OTF Light
+WritingScript:Korean
+OutlineFileName:E:\손나라\Redesign(Profile)\Font\NEXON Lv1 Gothic OTF Light.otf
+DataFormat:sfntData
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:882068
+FileModTime:1507862928
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,NEXON Lv1 Gothic OTF Light
+NameArray:3,Mac,4,넥슨Lv1고딕 OTF Light
+NameArray:0,Win,1,NEXON Lv1 Gothic OTF Light
+NameArray:0,Win,16,NEXON Lv1 Gothic OTF
+NameArray:3,Win,1,넥슨Lv1고딕 OTF Light
+NameArray:3,Win,16,넥슨Lv1고딕 OTF
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:CID
 FontName:NEXONLv1GothicOTFRegular
 FamilyName:NEXON Lv1 Gothic OTF
 StyleName:Regular
