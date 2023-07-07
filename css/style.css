@@ -120,7 +120,7 @@ footer {
   top: 4%;
   right: 7%;
   z-index: 1;
-  transform: translateX(120%);
+  transform: translateX(130%);
   transition: all 1s ease 0s;
 }
 
@@ -232,9 +232,9 @@ footer {
 /* intro left bar */
 .introSVG .cls-deco {
   fill: transparent;
-  transition: all 1s ease 0s;
   opacity: 0.5;
-  transform: translateX(60px);
+  transform: translateX(-60px);
+  transition: all 1s ease 5s;
 }
 
 .introSVG.on .cls-deco {
@@ -261,6 +261,7 @@ footer {
 
 #iam>h1 {
   color: #232323;
+  font-size: 20rem;
 }
 
 #iam>figure {
@@ -380,6 +381,10 @@ footer {
   position: relative;
 }
 
+#popup>h1 {
+  font-size: 7rem;
+}
+
 .btnPopup {
   position: absolute;
   top: 50%;
@@ -432,8 +437,8 @@ footer {
 
 .btnView {
   position: absolute;
-  top: 53%;
-  left: 42%;
+  top: calc(50% + 75px);
+  left: 50%;
   width: 300px;
   height: 57px;
   color: #fff;
@@ -446,6 +451,7 @@ footer {
   line-height: 57px;
   display: none;
   pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 .btnView.on {
@@ -461,6 +467,7 @@ footer {
   font-size: 15px;
   width: 350px;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .pop_pagination>li {
@@ -710,6 +717,7 @@ footer {
   width: 180px;
   justify-content: space-between;
   font-size: 15px;
+  z-index: 10;
 }
 
 .banner_pagination>li {
@@ -839,12 +847,12 @@ footer {
 /* page6 - redesign */
 #redesign {
   position: relative;
+  display: flex;
 }
 
 .reImg {
   width: 1000px;
-  padding-top: 100px;
-  margin-left: 50px;
+  margin: 100px 0 0 100px;
 }
 
 .reImg>img {
@@ -853,9 +861,7 @@ footer {
 }
 
 .txtRedesign {
-  position: absolute;
-  top: 20%;
-  right: 20%;
+  margin: 150px 0 0 50px;
 }
 
 .txtRedesign>h4 {
@@ -967,6 +973,7 @@ footer {
 
 footer>h1 {
   color: #232323;
+  font-size: 15rem;
 }
 
 .insta {

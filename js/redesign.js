@@ -15,7 +15,6 @@ $(document).ready(function () {
     $(".reWrap").eq(2).addClass("on")
   })
   $(".txtRedesign>ul>li").eq(3).click(function (e) { 
-    e.preventDefault ()
     $(".reWrap").eq(3).addClass("on")
   })
 

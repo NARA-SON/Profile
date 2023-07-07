@@ -9,7 +9,6 @@ $(document).ready(function () {
       $(".gnb").removeClass("on")
     }
   })
-
     
     //top버튼을 누르면 맨 위로 이동
   $(".top").click(function () { 
