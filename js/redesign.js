@@ -27,6 +27,15 @@ $(document).ready(function () {
     $(this).next().addClass("on")
   })
 
+    //beforeAfter 탭메뉴 기능
+  $(".baTab>dt").click(function(){
+    $(".baTab>dt").removeClass("on")
+    $(this).addClass("on")
+
+    $(".baTab>dd").removeClass("on")
+    $(this).next().addClass("on")
+  })
+
 
   
 })
